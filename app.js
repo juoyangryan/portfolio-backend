@@ -8,6 +8,8 @@ const port = process.env.PORT || "4000"
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+// Enable CORS
+app.use(cors());
 
 
 function sendEmail({ name, email, message }) {
